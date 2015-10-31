@@ -1,0 +1,1728 @@
+@charset "utf-8";
+
+/* CSS reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td
+	{
+	margin: 0;
+	padding: 0;
+}
+
+
+a {
+	text-decoration: none;
+	color: #000000;
+}
+
+TD li {
+	padding-left: 28px;
+	padding-top: 24px;
+}
+
+TD LI A:LINK {
+	text-decoration: underline;
+	color: blue;
+}
+
+TD LI a:VISITED {
+	text-decoration: underline;
+	color: blue;
+}
+
+a:link {
+	color: #000000;
+}
+
+a:visited {
+	color: #000000;
+}
+
+a:hover,a:active,a:focus {
+	color: #000000;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+fieldset,img {
+	border: 0;
+}
+
+address,caption,cite,code,dfn,th,var {
+	font-style: normal;
+	font-weight: normal;
+}
+
+ol,ul li {
+	list-style: none;
+}
+
+caption,th {
+	text-align: left;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+
+q:before,q:after {
+	content: '';
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	font-size: 16px;
+	background-color: #FFF;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: "Helvetica Neue", "Hiragino Sans GB W3", "Hiragino Sans GB",
+		"Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+
+/*CSS for header*/
+.header {
+	text-align: center;
+	width: 100%;
+	height: 90px;
+	background-color: #469FC1;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.header_logo {
+	text-align: center;
+	width: 196px;
+	height: 55px;
+	background-image: url(../images/logo.jpg);
+	background-repeat: no-repeat;
+	float: left;
+	margin: 17px 30px auto auto;
+}
+
+.nav {
+	width: 1100px;
+	height: 90px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+
+.nav ul {
+	float: left;
+}
+
+.nav ul li {
+	width: 100px;
+	height: 90px;
+	float: left;
+}
+
+.nav ul li a {
+	display: inline-block;;
+	width: 100px;
+	height: 26px;
+	line-height: 26px;
+	margin: 37px auto 37px 35px;
+}
+
+.central {
+	min-width: 1349px;
+	height: auto;
+	margin: 15px auto;
+	background-color: #EEEEF4;
+}
+
+.central_main {
+	width: 1100px;
+	height: 348px;
+	margin: 0 auto;
+	position: relative;
+}
+
+/*轮播图样式*/
+.central-con,.central-con {
+	position: absolute;
+	width: 828px;
+	height: 348px;
+	z-index: 0;
+	content: '';
+	background: transparent url(/images/logo.png) repeat top left;
+}
+
+.central-tit ul {
+	position: absolute;
+	width: 180px;
+	height: 10px;
+	right: 50px;
+	bottom: 50px;
+	z-index: 9999;
+}
+
+.central-tit ul li {
+	list-style: none;
+	height: 10px;
+	width: 10px;
+	float: left;
+	background-color: rgba(0, 0, 0, 0.4);
+	margin-right: 10px;
+	margin-left: 10px;
+	border-radius: 5px;
+}
+
+.central-tit li.select {
+	background-color: rgba(255, 255, 255, 0.35);
+	border-bottom-color: #FFF;
+	padding: 0;
+}
+
+.central li a:link,.central li a:visited {
+	color: orange;
+}
+
+.central li a:hover {
+	color: blue;
+}
+
+.central-con {
+	width: 828px;
+	height: 348px;
+	float: left;
+	position: absolute;
+}
+
+.central-con .mod {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	-webkit-animation: imageAnimation 4s linear 0s infinite normal running
+		none;
+	-moz-animation: imageAnimation 4s linear 0s infinite normal running none
+		;
+	-o-animation: imageAnimation 4s linear 0s infinite normal running none;
+	-ms-animation: imageAnimation 4s linear 0s infinite normal running none;
+	animation: imageAnimation 4s linear 0s infinite normal running none;
+}
+
+.central-con .mod .img {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-size: cover;
+	z-index: 1;
+}
+
+@
+-webkit-keyframes imageAnimation { 0% {
+	opacity: 0.85;
+	-webkit-animation-timing-function: ease-in;
+}
+
+75%
+{
+opacity
+
+
+
+
+
+
+
+
+
+
+
+
+:
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+1;
+-webkit-animation-timing-function
+
+
+
+
+
+
+
+
+
+
+
+
+:
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ease-out
+
+
+
+
+
+
+
+
+
+
+
+
+;
+}
+87%
+{
+opacity
+
+
+
+
+
+
+
+
+
+
+
+
+:
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+1;
+-webkit-animation-timing-function
+
+
+
+
+
+
+
+
+
+
+
+
+:
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ease-in
+
+
+
+
+
+
+
+
+
+
+
+
+;
+}
+100%
+{
+opacity
+
+
+
+
+
+
+
+
+
+
+
+
+:
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+0
+.85
+
+
+
+
+
+
+
+
+
+
+
+
+;
+-webkit-animation-timing-function
+
+
+
+
+
+
+
+
+
+
+
+
+:
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ease-out
+
+
+
+
+
+
+
+
+
+
+
+
+;
+}
+}
+@
+-moz-keyframes imageAnimation { 0% {
+	opacity: 0.9;
+	-moz-animation-timing-function: ease-in;
+}
+
+75%
+{
+opacity
+
+
+
+
+
+
+
+
+
+
+
+
+:
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+1;
+-moz-animation-timing-function
+
+
+
+
+
+
+
+
+
+
+
+
+:
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ease-out
+
+
+
+
+
+
+
+
+
+
+
+
+;
+}
+87%
+{
+opacity
+
+
+
+
+
+
+
+
+
+
+
+
+:
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+1;
+-moz-animation-timing-function
+
+
+
+
+
+
+
+
+
+
+
+
+:
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ease-in
+
+
+
+
+
+
+
+
+
+
+
+
+;
+}
+100%
+{
+opacity
+
+
+
+
+
+
+
+
+
+
+
+
+:
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+0
+.85
+
+
+
+
+
+
+
+
+
+
+
+
+;
+-moz-animation-timing-function
+
+
+
+
+
+
+
+
+
+
+
+
+:
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ease-out
+
+
+
+
+
+
+
+
+
+
+
+
+;
+}
+}
+@
+-o-keyframes imageAnimation { 0% {
+	opacity: 0.85;
+	-o-animation-timing-function: ease-in;
+}
+
+75%
+{
+opacity
+
+
+
+
+
+
+
+
+
+
+
+
+:
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+1;
+-o-animation-timing-function
+
+
+
+
+
+
+
+
+
+
+
+
+:
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ease-out
+
+
+
+
+
+
+
+
+
+
+
+
+;
+}
+87%
+{
+opacity
+
+
+
+
+
+
+
+
+
+
+
+
+:
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+1;
+-o-animation-timing-function
+
+
+
+
+
+
+
+
+
+
+
+
+:
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ease-in
+
+
+
+
+
+
+
+
+
+
+
+
+;
+}
+100%
+{
+opacity
+
+
+
+
+
+
+
+
+
+
+
+
+:
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+0
+.85
+
+
+
+
+
+
+
+
+
+
+
+
+;
+-o-animation-timing-function
+
+
+
+
+
+
+
+
+
+
+
+
+:
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ease-out
+
+
+
+
+
+
+
+
+
+
+
+
+;
+}
+}
+@
+-ms-keyframes imageAnimation { 0% {
+	opacity: 0.85;
+	-ms-animation-timing-function: ease-in;
+}
+
+75%
+{
+opacity
+
+
+
+
+
+
+
+
+
+
+
+
+:
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+1;
+-ms-animation-timing-function
+
+
+
+
+
+
+
+
+
+
+
+
+:
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ease-out
+
+
+
+
+
+
+
+
+
+
+
+
+;
+}
+87%
+{
+opacity
+
+
+
+
+
+
+
+
+
+
+
+
+:
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+1;
+-ms-animation-timing-function
+
+
+
+
+
+
+
+
+
+
+
+
+:
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ease-in
+
+
+
+
+
+
+
+
+
+
+
+
+;
+}
+100%
+{
+opacity
+
+
+
+
+
+
+
+
+
+
+
+
+:
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+0
+.85
+
+
+
+
+
+
+
+
+
+
+
+
+;
+-ms-animation-timing-function
+
+
+
+
+
+
+
+
+
+
+
+
+:
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ease-out
+
+
+
+
+
+
+
+
+
+
+
+
+;
+}
+}
+@
+keyframes imageAnimation { 0% {
+	opacity: 0.85;
+	animation-timing-function: ease-in;
+}
+
+75%
+{
+opacity
+
+
+
+
+
+
+
+
+
+
+
+
+:
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+1;
+animation-timing-function
+
+
+
+
+
+
+
+
+
+
+
+
+:
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ease-out
+
+
+
+
+
+
+
+
+
+
+
+
+;
+}
+87%
+{
+opacity
+
+
+
+
+
+
+
+
+
+
+
+
+:
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+1;
+animation-timing-function
+
+
+
+
+
+
+
+
+
+
+
+
+:
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ease-in
+
+
+
+
+
+
+
+
+
+
+
+
+;
+}
+100%
+{
+opacity
+
+
+
+
+
+
+
+
+
+
+
+
+:
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+0
+.85
+
+
+
+
+
+
+
+
+
+
+
+
+;
+animation-timing-function
+
+
+
+
+
+
+
+
+
+
+
+
+:
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ease-out
+
+
+
+
+
+
+
+
+
+
+
+
+;
+}
+}
+/*编辑推荐CSS样式*/
+.editor_choice {
+	width: 266px;
+	height: 346px;
+	float: left;
+	left: 840px;
+	position: absolute;
+	border: 1px solid #F2B02E;
+	border-radius: 15px;
+}
+
+.editor_title {
+	width: 200px;
+	height: 18px;
+	line-height: 18px;
+	margin: 10px auto 5px 20px;
+	font-size: 18px;
+}
+
+.editor_book {
+	width: 266px;
+	height: 315px;
+}
+
+.editor_book ul li {
+	display: inline-block;
+	width: 240px;
+	height: 20px;
+	margin: 9px auto 10px 10px;
+}
+
+/*search*/
+.search {
+	width: 1100px;
+	height: auto;
+	margin: 15px auto;
+}
+
+.search-box {
+	width: 562px;
+	margin: 0 auto;
+}
+
+.search-title {
+	text-align: center;
+	font-size: 24px;
+	color: #000;
+	height: 47px;
+	padding: 22px 0 0 0
+}
+
+.top_search_botton {
+	border: 0px;
+	border-radius: 5px;
+	height: 45px;
+	margin: 0px;
+	width: 95px;
+	display: inline;
+	line-height: 45px;
+	font-family: "微软雅黑", "黑体", "sans-serif";
+	font-weight: bold;
+	background-color: #CC66FF;
+	font-size: 18px;
+	font-style: normal;
+	color: #FFFFFF;
+}
+
+#search_input {
+	align: center;
+	margin: 0px;
+	height: 45px;
+	width: 100%;
+	text-align: center;
+	display: block;
+}
+
+.top_input {
+	border-radius: 8px;
+	height: 45px;
+	margin: 0px;
+	width: 280px;
+	line-height: 45px;
+}
+
+/*product CSS*/
+.product {
+	text-align: center;
+	min-width: 1349px;
+	height: auto;
+	margin-top: 15px;
+	text-align: left;
+	background-color: #EEEEF4;
+}
+
+.product h2 {
+	font-weight: bold;
+}
+
+.product_main {
+	text-align: center;
+	width: 1100px;
+	height: 860px;
+	margin: 10px auto;
+	border: 1px solid #eee;
+}
+
+.product-tit {
+	height: 27px;
+	position: relative;
+}
+
+.product-tit ul {
+	position: absolute;
+	width: 1100px;
+	margin: 10px auto;
+}
+
+.product-tit li {
+	float: left;
+	width: 166px;
+	height: 36px;
+	line-height: 36px;
+	text-align: center;
+	color: orange;
+	font-size: 22px;
+	padding: 0 1px;
+	background-color: #f7f7f7;
+}
+
+.product-tit li.select {
+	font-size: 24px;
+	background: #FFF;
+	border-bottom-color: #FFF;
+	border-left: 1px solid #EEE;
+	border-right: 1px solid #EEE;
+	padding: 0;
+	font-weight: bolder;
+}
+
+.product li a:link,.product li a:visited {
+	text-decoration: none;
+	color: orange;
+}
+
+.product li a:hover {
+	color: blue;
+}
+
+.product-con {
+	text-align: center;
+	width: 1056px;
+	height: auto;
+	margin-top: 50px;
+}
+
+.product-con .mod { /*margine: 10px 10px 10px 19px;*/
+	text-align: center;
+}
+
+.product-con .mod ul li {
+	float: left;
+	width: 244px;
+	height: 341px;
+	display: block;
+	border: 1px solid #000;
+	border-radius: 15px;
+	margin: 5px;
+}
+
+.mod ul li span {
+	width: 232px;
+	height: 197px;
+	border: 1px solid #000;
+	background-color: #123456;
+	display: block;
+	margin: 5px;
+}
+
+.mod ul li img {
+	width: 180px;
+	height: 240px;
+	margin-top: 20px;
+	margin-left: 32px;
+	border: 1px solid #000;
+	background-color: #123456;
+	display: block;
+}
+
+.mod ul li p {
+	display: block;
+	width: 232px;
+	height: 20px;
+	display: block;
+	margin-top: 15px;
+	line-height: 20px;
+	text-align: center;
+}
+
+/*bottom CSS*/
+.bottom {
+	text-align: center;
+	max-width: 84.3125em;
+	height: 200px;
+	padding: 1em 7.78125em;
+	background-color: #727272;
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.bottom ul li {
+	width: 25%;
+	height: 200px;
+	float: left;
+	background-color: #727272;
+}
+
+.bottom_title {
+	font-weight: bold;
+	text-align: left;
+	width: 150px;
+	height: 25px;
+	margin: 10px 15px;
+	font-size: 18px;
+	padding-left: 10px;
+	line-height: 18px;
+	color: #FFF;
+	border-bottom: 1px solid #FFFFFF;
+}
+
+.style {
+	margin-left: 50px;
+}
+
+.style p {
+	text-align: left;
+	font-weight: bold;
+}
+
+.style a {
+	width: 300px;
+	height: 25px;
+	margin: 15px 24px;
+	text-align: left;
+	display: block;
+	font-size: 16px;
+	line-height: 16px;
+	color: #FFF;
+}
+
+.phone {
+	width: 280px;
+	height: 60px;
+	margin: 30px 10px;
+}
+
+.logo a {
+	width: 100px;
+	height: auto;
+	float: left;
+}
+
+.weibo {
+    width: 66px;
+    height: 66px;
+    border: 1px solid #FFF;
+    border-radius: 33px;
+    margin: 15px 10px;
+    background-repeat: no-repeat;
+    -webkit-border-radius: 33px;
+    -moz-border-radius: 33px;
+    background-image:url(../images/weibo.png);
+}
+
+.hsy_weibo {
+    position:relative;
+}
+.hsy_weibo img{display:none;}
+.hsy_weibo:hover img{
+    width:120px;
+    height:120px;
+    border:1px solid #4C9ED9;
+    display:block;
+    position: absolute;
+    left:-18px;
+    top:-110px;
+}
+
+.weixin {
+    width: 66px;
+    height: 66px;
+    border: 1px solid #FFF;
+    border-radius: 33px;
+    margin: 15px 10px;
+    background-repeat: no-repeat;
+    -webkit-border-radius: 33px;
+    -moz-border-radius: 33px;
+    background-image:url(../images/weixin.png);
+}
+
+h2 {
+	font-size: 20px;
+	display: inline-block;
+	margin: 10px auto 10px 120px;
+	height: 30px;
+}
+
+#footer0 {
+	text-align: center;
+}
+
+#top0 {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.top_bar:hover {
+	font-weight: bold;
+	background-color: #0000cd;
+}
+
+.code {
+	text-align: center;
+	float: inherit;
+}

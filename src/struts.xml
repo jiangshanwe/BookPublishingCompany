@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.multipart.maxSize" value="10000000000" />
+	<package name="langwen" extends="struts-default" namespace="/">
+		<global-results>
+			<result name="input">/pages/errorMsg.jsp</result>
+			<result name="adminSuccess">/page/admin/asuccess.jsp</result>
+			<result name="error">/pages/aerrorMsg.jsp</result>
+			<result name="successMsg">/pages/successMsg.jsp</result>
+			<result name="noResult">/pages/front/noResult.jsp</result>
+		</global-results>
+		<action name="gly*" class="com.langwen.admin.action.GuanliyuanAction"
+			method="gly{1}">
+			<result name="success">aahome.jsp</result>
+			<result name="reLogin">alogin.jsp</result>
+			<result name="allGlys">/pages/admin/glyShowall.jsp</result>
+			<result name="glyShowall" type="redirectAction">glyShowall</result>
+			<result name="glyTianjia">/pages/admin/glyTianjia.jsp</result>
+			<result name="glyQxpz">/pages/admin/glyQxpz.jsp</result>
+		</action>
+		<action name="banner*" class="com.langwen.admin.action.BannerAction"
+			method="banner{1}">
+			<param name="tupianTypes">image/bmp,image/png,image/gif,image/jpeg,image/pjpeg,image/jpg</param>
+			<param name="savePath">/fujian/banner</param>
+			<result name="allBanners">/pages/admin/bannerShowall.jsp</result>
+			<result name="bannerTianjia">/pages/admin/bannerTianjia.jsp</result>
+			<result name="bannerShowall" type="redirectAction">bannerShowall</result>
+		</action>
+		<action name="lwjj*" class="com.langwen.admin.action.LwjjAction"
+			method="lwjj{1}">
+			<result name="allLwjjs">/pages/admin/lwjjShowall.jsp</result>
+			<result name="lwjjTianjia">/pages/admin/lwjjTianjia.jsp</result>
+			<result name="lwjjShowall" type="redirectAction">lwjjShowall</result>
+			<result name="lwjjBianji">/pages/admin/lwjjBianji.jsp</result>
+			<result name="lwjjYulan">/pages/admin/lwjjYulan.jsp</result>
+		</action>
+		<action name="gdwk*" class="com.langwen.admin.action.GdwkAction"
+			method="gdwk{1}">
+			<param name="tupianTypes">image/bmp,image/png,image/gif,image/jpeg,image/pjpeg,image/jpg</param>
+			<param name="savePath">/bookPic/gdwk</param>
+			<result name="allGdwks">/pages/admin/gdwkShowall.jsp</result>
+			<result name="gdwkTianjia">/pages/admin/gdwkTianjia.jsp</result>
+			<result name="gdwkShowall" type="redirectAction">gdwkShowall</result>
+			<result name="gdwkBianji">/pages/admin/gdwkBianji.jsp</result>
+			<result name="gdwkYulan">/pages/admin/gdwkYulan.jsp</result>
+		</action>
+		<action name="gdlg*" class="com.langwen.admin.action.GdlgAction"
+			method="gdlg{1}">
+			<param name="tupianTypes">image/bmp,image/png,image/gif,image/jpeg,image/pjpeg,image/jpg</param>
+			<param name="savePath">/bookPic/gdlg</param>
+			<result name="allGdlgs">/pages/admin/gdlgShowall.jsp</result>
+			<result name="gdlgTianjia">/pages/admin/gdlgTianjia.jsp</result>
+			<result name="gdlgShowall" type="redirectAction">gdlgShowall</result>
+			<result name="gdlgBianji">/pages/admin/gdlgBianji.jsp</result>
+			<result name="gdlgYulan">/pages/admin/gdlgYulan.jsp</result>
+		</action>
+		<action name="swny*" class="com.langwen.admin.action.SwnyAction"
+			method="swny{1}">
+			<param name="tupianTypes">image/bmp,image/png,image/gif,image/jpeg,image/pjpeg,image/jpg</param>
+			<param name="savePath">/bookPic/swny</param>
+			<result name="allSwnys">/pages/admin/swnyShowall.jsp</result>
+			<result name="swnyTianjia">/pages/admin/swnyTianjia.jsp</result>
+			<result name="swnyShowall" type="redirectAction">swnyShowall</result>
+			<result name="swnyBianji">/pages/admin/swnyBianji.jsp</result>
+			<result name="swnyYulan">/pages/admin/swnyYulan.jsp</result>
+		</action>
+		<action name="gzjy*" class="com.langwen.admin.action.GzjyAction"
+			method="gzjy{1}">
+			<param name="tupianTypes">image/bmp,image/png,image/gif,image/jpeg,image/pjpeg,image/jpg</param>
+			<param name="savePath">/bookPic/gzjy</param>
+			<result name="allGzjys">/pages/admin/gzjyShowall.jsp</result>
+			<result name="gzjyTianjia">/pages/admin/gzjyTianjia.jsp</result>
+			<result name="gzjyShowall" type="redirectAction">gzjyShowall</result>
+			<result name="gzjyBianji">/pages/admin/gzjyBianji.jsp</result>
+			<result name="gzjyYulan">/pages/admin/gzjyYulan.jsp</result>
+		</action>
+		<action name="zzjy*" class="com.langwen.admin.action.ZzjyAction"
+			method="zzjy{1}">
+			<param name="tupianTypes">image/bmp,image/png,image/gif,image/jpeg,image/pjpeg,image/jpg</param>
+			<param name="savePath">/bookPic/zzjy</param>
+			<result name="allZzjys">/pages/admin/zzjyShowall.jsp</result>
+			<result name="zzjyTianjia">/pages/admin/zzjyTianjia.jsp</result>
+			<result name="zzjyShowall" type="redirectAction">zzjyShowall</result>
+			<result name="zzjyBianji">/pages/admin/zzjyBianji.jsp</result>
+			<result name="zzjyYulan">/pages/admin/zzjyYulan.jsp</result>
+		</action>
+		<action name="jsjy*" class="com.langwen.admin.action.JsjyAction"
+			method="jsjy{1}">
+			<param name="tupianTypes">image/bmp,image/png,image/gif,image/jpeg,image/pjpeg,image/jpg</param>
+			<param name="savePath">/bookPic/jsjy</param>
+			<result name="allJsjys">/pages/admin/jsjyShowall.jsp</result>
+			<result name="jsjyTianjia">/pages/admin/jsjyTianjia.jsp</result>
+			<result name="jsjyShowall" type="redirectAction">jsjyShowall</result>
+			<result name="jsjyBianji">/pages/admin/jsjyBianji.jsp</result>
+			<result name="jsjyYulan">/pages/admin/jsjyYulan.jsp</result>
+		</action>
+		<action name="rczp*" class="com.langwen.admin.action.RczpAction"
+			method="rczp{1}">
+			<result name="allRczps">/pages/admin/rczpShowall.jsp</result>
+			<result name="rczpTianjia">/pages/admin/rczpTianjia.jsp</result>
+			<result name="rczpShowall" type="redirectAction">rczpShowall</result>
+			<result name="rczpBianji">/pages/admin/rczpBianji.jsp</result>
+			<result name="rczpYulan">/pages/admin/rczpYulan.jsp</result>
+		</action>
+		<action name="lxwm*" class="com.langwen.admin.action.LxwmAction"
+			method="lxwm{1}">
+			<result name="allLxwms">/pages/admin/lxwmShowall.jsp</result>
+			<result name="lxwmTianjia">/pages/admin/lxwmTianjia.jsp</result>
+			<result name="lxwmShowall" type="redirectAction">lxwmShowall</result>
+			<result name="lxwmBianji">/pages/admin/lxwmBianji.jsp</result>
+			<result name="lxwmYulan">/pages/admin/lxwmYulan.jsp</result>
+		</action>
+		<action name="cbtd*" class="com.langwen.admin.action.CbtdAction"
+			method="cbtd{1}">
+			<result name="allCbtds">/pages/admin/cbtdShowall.jsp</result>
+			<result name="cbtdTianjia">/pages/admin/cbtdTianjia.jsp</result>
+			<result name="cbtdShowall" type="redirectAction">cbtdShowall</result>
+			<result name="cbtdBianji">/pages/admin/cbtdBianji.jsp</result>
+			<result name="cbtdYulan">/pages/admin/cbtdYulan.jsp</result>
+		</action>
+		<action name="yssq*" class="com.langwen.admin.action.YssqAction"
+			method="yssq{1}">
+			<param name="savePath">/fujian/yssq</param>
+			<result name="yssqShow">/pages/admin/yssqShow.jsp</result>
+			<result name="yssqBianji">/pages/admin/yssqBianji.jsp</result>
+			<result name="reYssqShow" type="redirectAction">yssqShow</result>
+		</action>
+		<action name="jxfwjs*" class="com.langwen.admin.action.JxfwjsAction"
+			method="jxfwjs{1}">
+			<param name="savePath">/fujian/jxfwjs</param>
+			<result name="jxfwjsShow">/pages/admin/jxfwjsShow.jsp</result>
+			<result name="jxfwjsBianji">/pages/admin/jxfwjsBianji.jsp</result>
+			<result name="reJxfwjsShow" type="redirectAction">jxfwjsShow</result>
+		</action>
+		<action name="hyyq*" class="com.langwen.admin.action.HyyqAction"
+			method="hyyq{1}">
+			<param name="tupianTypes">image/bmp,image/png,image/gif,image/jpeg,image/pjpeg,image/jpg</param>
+			<param name="savePath">/fujian/hyyq</param>
+			<result name="allHyyqs">/pages/admin/hyyqShowall.jsp</result>
+			<result name="hyyqTianjia">/pages/admin/hyyqTianjia.jsp</result>
+			<result name="hyyqShowall" type="redirectAction">hyyqShowall</result>
+			<result name="hyyqBianji">/pages/admin/hyyqBianji.jsp</result>
+			<result name="hyyqYulan">/pages/admin/hyyqYulan.jsp</result>
+		</action>
+		<action name="kjxz*" class="com.langwen.admin.action.KjxzAction"
+			method="kjxz{1}">
+			<param name="tupianTypes">image/bmp,image/png,image/gif,image/jpeg,image/pjpeg,image/jpg</param>
+			<param name="savePath">/fujian/kjxz</param>
+			<result name="allKjxzs">/pages/admin/kjxzShowall.jsp</result>
+			<result name="kjxzTianjia">/pages/admin/kjxzTianjia.jsp</result>
+			<result name="kjxzShowall" type="redirectAction">kjxzShowall</result>
+			<result name="kjxzBianji">/pages/admin/kjxzBianji.jsp</result>
+			<result name="kjxzYulan">/pages/admin/kjxzYulan.jsp</result>
+		</action>
+		<action name="xzzx*" class="com.langwen.admin.action.XzzxAction"
+			method="xzzx{1}">
+			<param name="tupianTypes">image/bmp,image/png,image/gif,image/jpeg,image/pjpeg,image/jpg</param>
+			<param name="savePath">/fujian/xzzx</param>
+			<result name="allXzzxs">/pages/admin/xzzxShowall.jsp</result>
+			<result name="xzzxTianjia">/pages/admin/xzzxTianjia.jsp</result>
+			<result name="xzzxShowall" type="redirectAction">xzzxShowall</result>
+			<result name="xzzxBianji">/pages/admin/xzzxBianji.jsp</result>
+			<result name="xzzxYulan">/pages/admin/xzzxYulan.jsp</result>
+		</action>
+		<action name="qyxw*" class="com.langwen.admin.action.QyxwAction"
+			method="qyxw{1}">
+			<result name="allQyxws">/pages/admin/qyxwShowall.jsp</result>
+			<result name="qyxwTianjia">/pages/admin/qyxwTianjia.jsp</result>
+			<result name="qyxwShowall" type="redirectAction">qyxwShowall</result>
+			<result name="qyxwBianji">/pages/admin/qyxwBianji.jsp</result>
+			<result name="qyxwYulan">/pages/admin/qyxwYulan.jsp</result>
+		</action>
+		<action name="gxxw*" class="com.langwen.admin.action.GxxwAction"
+			method="gxxw{1}">
+			<result name="allGxxws">/pages/admin/gxxwShowall.jsp</result>
+			<result name="gxxwTianjia">/pages/admin/gxxwTianjia.jsp</result>
+			<result name="gxxwShowall" type="redirectAction">gxxwShowall</result>
+			<result name="gxxwBianji">/pages/admin/gxxwBianji.jsp</result>
+			<result name="gxxwYulan">/pages/admin/gxxwYulan.jsp</result>
+		</action>
+		<action name="hydt*" class="com.langwen.admin.action.HydtAction"
+			method="hydt{1}">
+			<result name="allHydts">/pages/admin/hydtShowall.jsp</result>
+			<result name="hydtTianjia">/pages/admin/hydtTianjia.jsp</result>
+			<result name="hydtShowall" type="redirectAction">hydtShowall</result>
+			<result name="hydtBianji">/pages/admin/hydtBianji.jsp</result>
+			<result name="hydtYulan">/pages/admin/hydtYulan.jsp</result>
+		</action>
+		<action name="bjtj*" class="com.langwen.admin.action.BjtjAction"
+			method="bjtj{1}">
+			<result name="allBjtjs">/pages/admin/bjtjShowall.jsp</result>
+			<result name="bjtjTianjia">/pages/admin/bjtjTianjia.jsp</result>
+			<result name="bjtjShowall" type="redirectAction">bjtjShowall</result>
+			<result name="bjtjBianji">/pages/admin/bjtjBianji.jsp</result>
+			<result name="bjtjYulan">/pages/admin/bjtjYulan.jsp</result>
+		</action>
+		<action name="zsgdlg*" class="com.langwen.admin.action.ZsgdlgAction"
+			method="zsgdlg{1}">
+			<param name="tupianTypes">image/bmp,image/png,image/gif,image/jpeg,image/pjpeg,image/jpg</param>
+			<param name="savePath">/fujian/zsgdlg</param>
+			<result name="allZsgdlgs">/pages/admin/zsgdlgShowall.jsp</result>
+			<result name="zsgdlgTianjia">/pages/admin/zsgdlgTianjia.jsp</result>
+			<result name="zsgdlgShowall" type="redirectAction">zsgdlgShowall</result>
+			<result name="zsgdlgBianji">/pages/admin/zsgdlgBianji.jsp</result>
+			<result name="zsgdlgYulan">/pages/admin/zsgdlgYulan.jsp</result>
+		</action>
+		<action name="zsgdwk*" class="com.langwen.admin.action.ZsgdwkAction"
+			method="zsgdwk{1}">
+			<param name="tupianTypes">image/bmp,image/png,image/gif,image/jpeg,image/pjpeg,image/jpg</param>
+			<param name="savePath">/fujian/zsgdwk</param>
+			<result name="allZsgdwks">/pages/admin/zsgdwkShowall.jsp</result>
+			<result name="zsgdwkTianjia">/pages/admin/zsgdwkTianjia.jsp</result>
+			<result name="zsgdwkShowall" type="redirectAction">zsgdwkShowall</result>
+			<result name="zsgdwkBianji">/pages/admin/zsgdwkBianji.jsp</result>
+			<result name="zsgdwkYulan">/pages/admin/zsgdwkYulan.jsp</result>
+		</action>
+		<action name="zsswny*" class="com.langwen.admin.action.ZsswnyAction"
+			method="zsswny{1}">
+			<param name="tupianTypes">image/bmp,image/png,image/gif,image/jpeg,image/pjpeg,image/jpg</param>
+			<param name="savePath">/fujian/zsswny</param>
+			<result name="allZsswnys">/pages/admin/zsswnyShowall.jsp</result>
+			<result name="zsswnyTianjia">/pages/admin/zsswnyTianjia.jsp</result>
+			<result name="zsswnyShowall" type="redirectAction">zsswnyShowall</result>
+			<result name="zsswnyBianji">/pages/admin/zsswnyBianji.jsp</result>
+			<result name="zsswnyYulan">/pages/admin/zsswnyYulan.jsp</result>
+		</action>
+		<action name="zsgzjy*" class="com.langwen.admin.action.ZsgzjyAction"
+			method="zsgzjy{1}">
+			<param name="tupianTypes">image/bmp,image/png,image/gif,image/jpeg,image/pjpeg,image/jpg</param>
+			<param name="savePath">/fujian/zsgzjy</param>
+			<result name="allZsgzjys">/pages/admin/zsgzjyShowall.jsp</result>
+			<result name="zsgzjyTianjia">/pages/admin/zsgzjyTianjia.jsp</result>
+			<result name="zsgzjyShowall" type="redirectAction">zsgzjyShowall</result>
+			<result name="zsgzjyBianji">/pages/admin/zsgzjyBianji.jsp</result>
+			<result name="zsgzjyYulan">/pages/admin/zsgzjyYulan.jsp</result>
+		</action>
+		<action name="zszzjy*" class="com.langwen.admin.action.ZszzjyAction"
+			method="zszzjy{1}">
+			<param name="tupianTypes">image/bmp,image/png,image/gif,image/jpeg,image/pjpeg,image/jpg</param>
+			<param name="savePath">/fujian/zszzjy</param>
+			<result name="allZszzjys">/pages/admin/zszzjyShowall.jsp</result>
+			<result name="zszzjyTianjia">/pages/admin/zszzjyTianjia.jsp</result>
+			<result name="zszzjyShowall" type="redirectAction">zszzjyShowall</result>
+			<result name="zszzjyBianji">/pages/admin/zszzjyBianji.jsp</result>
+			<result name="zszzjyYulan">/pages/admin/zszzjyYulan.jsp</result>
+		</action>
+		<action name="zsjsjy*" class="com.langwen.admin.action.ZsjsjyAction"
+			method="zsjsjy{1}">
+			<param name="tupianTypes">image/bmp,image/png,image/gif,image/jpeg,image/pjpeg,image/jpg</param>
+			<param name="savePath">/fujian/zsjsjy</param>
+			<result name="allZsjsjys">/pages/admin/zsjsjyShowall.jsp</result>
+			<result name="zsjsjyTianjia">/pages/admin/zsjsjyTianjia.jsp</result>
+			<result name="zsjsjyShowall" type="redirectAction">zsjsjyShowall</result>
+			<result name="zsjsjyBianji">/pages/admin/zsjsjyBianji.jsp</result>
+			<result name="zsjsjyYulan">/pages/admin/zsjsjyYulan.jsp</result>
+		</action>
+		<action name="yqlj*" class="com.langwen.admin.action.YqljAction"
+			method="yqlj{1}">
+			<result name="allYqljs">/pages/admin/yqljShowall.jsp</result>
+			<result name="yqljTianjia">/pages/admin/yqljTianjia.jsp</result>
+			<result name="yqljShowall" type="redirectAction">yqljShowall</result>
+			<result name="yqljBianji">/pages/admin/yqljBianji.jsp</result>
+			<result name="yqljYulan">/pages/admin/yqljYulan.jsp</result>
+		</action>
+		<action name="index" class="com.langwen.front.action.IndexAction"
+			method="index">
+			<result name="success">/index-list.jsp</result>
+		</action>
+		<action name="fgdlg*" class="com.langwen.front.action.FrontGdlgAction"
+			method="gdlg{1}">
+			<result name="gdlgList">/pages/front/gdlgList.jsp</result>
+			<result name="gdlgDetail">/pages/front/bookDetail.jsp</result>
+		</action>
+		<action name="fgdwk*" class="com.langwen.front.action.FrontGdwkAction"
+			method="gdwk{1}">
+			<result name="gdwkList">/pages/front/gdwkList.jsp</result>
+			<result name="gdwkDetail">/pages/front/bookDetail.jsp</result>
+		</action>
+		<action name="fswny*" class="com.langwen.front.action.FrontSwnyAction"
+			method="swny{1}">
+			<result name="swnyList">/pages/front/swnyList.jsp</result>
+			<result name="swnyDetail">/pages/front/bookDetail.jsp</result>
+		</action>
+		<action name="fgzjy*" class="com.langwen.front.action.FrontGzjyAction"
+			method="gzjy{1}">
+			<result name="gzjyList">/pages/front/gzjyList.jsp</result>
+			<result name="gzjyDetail">/pages/front/bookDetail.jsp</result>
+		</action>
+		<action name="fzzjy*" class="com.langwen.front.action.FrontZzjyAction"
+			method="zzjy{1}">
+			<result name="zzjyList">/pages/front/zzjyList.jsp</result>
+			<result name="zzjyDetail">/pages/front/bookDetail.jsp</result>
+		</action>
+		<action name="fjsjy*" class="com.langwen.front.action.FrontJsjyAction"
+			method="jsjy{1}">
+			<result name="jsjyList">/pages/front/jsjyList.jsp</result>
+			<result name="jsjyDetail">/pages/front/bookDetail.jsp</result>
+		</action>
+		<action name="fjxfw*" class="com.langwen.front.action.FrontJxfwAction"
+			method="jxfw{1}">
+			<result name="jxfwList">/pages/front/jxfwList.jsp</result>
+		</action>
+		<action name="fyssq*" class="com.langwen.front.action.FrontYssqAction"
+			method="yssq{1}">
+			<result name="yssq">/pages/front/yssq.jsp</result>
+		</action>
+		<action name="fhyyq*" class="com.langwen.front.action.FrontHyyqAction"
+			method="hyyq{1}">
+			<result name="hyyqList">/pages/front/hyyqList.jsp</result>
+			<result name="hyyqDetail">/pages/front/hyyqDetail.jsp</result>
+		</action>
+		<action name="fkjxz*" class="com.langwen.front.action.FrontKjxzAction"
+			method="kjxz{1}">
+			<result name="kjxzList">/pages/front/kjxzList.jsp</result>
+			<result name="kjxzDetail">/pages/front/kjxzDetail.jsp</result>
+		</action>
+		<action name="fxzzx*" class="com.langwen.front.action.FrontXzzxAction"
+			method="xzzx{1}">
+			<result name="xzzxList">/pages/front/xzzxList.jsp</result>
+			<result name="xzzxDetail">/pages/front/xzzxDetail.jsp</result>
+		</action>
+		<action name="flwjj*" class="com.langwen.front.action.FrontLwjjAction"
+			method="lwjj{1}">
+			<result name="lwjjList">/pages/front/lwjjList.jsp</result>
+		</action>
+		<action name="frczp*" class="com.langwen.front.action.FrontRczpAction"
+			method="rczp{1}">
+			<result name="rczpList">/pages/front/rczpList.jsp</result>
+		</action>
+		<action name="flxwm*" class="com.langwen.front.action.FrontLxwmAction"
+			method="lxwm{1}">
+			<result name="lxwmList">/pages/front/lxwmList.jsp</result>
+		</action>
+		<action name="fqyzx*" class="com.langwen.front.action.FrontQyxwAction"
+			method="qyxw{1}">
+			<result name="qyxwList">/pages/front/qyxwList.jsp</result>
+		</action>
+		<action name="fqyxwDetail" class="com.langwen.front.action.FrontQyxwAction"
+			method="qyxwDetail">
+			<result name="qyxwDetail">/pages/front/qyxwDetail.jsp</result>
+		</action>
+		<action name="fgxxw*" class="com.langwen.front.action.FrontGxxwAction"
+			method="gxxw{1}">
+			<result name="gxxwList">/pages/front/gxxwList.jsp</result>
+			<result name="gxxwDetail">/pages/front/gxxwDetail.jsp</result>
+		</action>
+		<action name="fcbtd*" class="com.langwen.front.action.FrontCbtdAction"
+			method="cbtd{1}">
+			<result name="cbtdList">/pages/front/cbtdList.jsp</result>
+		</action>
+		<action name="fhydt*" class="com.langwen.front.action.FrontCbtdAction"
+			method="hydt{1}">
+			<result name="hydtList">/pages/front/hydtList.jsp</result>
+			<result name="hydtDetail">/pages/front/hydtDetail.jsp</result>
+		</action>
+		<action name="asearchBook*" class="com.langwen.front.action.FrontSearchBookAction"
+			method="asearchBook{1}">
+			<result name="bookList">/pages/front/bookList.jsp</result>
+			<result name="kejianList">/pages/front/kejianList.jsp</result>
+			<result name="xiazaiList">/pages/front/xiazaiList.jsp</result>
+			<result name="bookDetail">/pages/front/bookDetail.jsp</result>
+		</action>
+		<action name="asearchKejian*" class="com.langwen.front.action.FrontSearchKejianAction"
+			method="asearchKejian{1}">
+			<result name="bookList">/pages/front/bookList.jsp</result>
+			<result name="kejianList">/pages/front/kejianList.jsp</result>
+			<result name="xiazaiList">/pages/front/xiazaiList.jsp</result>
+		</action>
+		<action name="asearchXiazai*" class="com.langwen.front.action.FrontSearchXiazaiAction"
+			method="asearchXiazai{1}">
+			<result name="bookList">/pages/front/bookList.jsp</result>
+			<result name="kejianList">/pages/front/kejianList.jsp</result>
+			<result name="xiazaiList">/pages/front/xiazaiList.jsp</result>
+		</action>
+		<action name="osearchBook*" class="com.langwen.front.action.FrontoSearchBookAction"
+			method="osearchBook{1}">
+			<result name="obookList">/pages/front/obookList.jsp</result>
+			<result name="bookDetail">/pages/front/bookDetail.jsp</result>
+		</action>
+		<action name="osearchKejian*" class="com.langwen.front.action.FrontoSearchKejianAction"
+			method="osearchKejian{1}">
+			<result name="okejianList">/pages/front/okejianList.jsp</result>
+		</action>
+		<action name="osearchXiazai*" class="com.langwen.front.action.FrontoSearchXiazaiAction"
+			method="osearchXiazai{1}">
+			<result name="oxiazaiList">/pages/front/oxiazaiList.jsp</result>
+		</action>
+	</package>
+</struts>    

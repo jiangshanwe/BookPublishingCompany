@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="Langwen"
+  id="myeclipse.1433209791627"
+  context-root="/Langwen"
+  j2ee-spec="5.0"
+  archive="Langwen.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
